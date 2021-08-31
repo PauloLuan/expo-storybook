@@ -1,5 +1,18 @@
 {
   "extends": "expo/tsconfig.base",
+  "baseUrl": "src",
+  "paths": {
+    "@components/*": ["./src/components/*"],
+    "@pages/*": ["./src/pages/*"],
+    "@hooks/*": ["./src/hooks/*"],
+    "@screens/*": ["./src/screens/*"],
+    "@configs/*": ["./src/configs/*"],
+    "@styles/*": ["./src/styles/*"],
+    "@assets/*": ["./src/assets/*"],
+    "@utils/*": ["./src/utils/*"],
+    "@types/*": ["./src/@types/*"]
+  },
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "strict": true
   }
