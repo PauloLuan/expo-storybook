@@ -19,7 +19,10 @@
   },
   "config": {
     "react-native-storybook-loader": {
-      "searchDir": ["./src", "./storybook"],
+      "searchDir": [
+        "./src",
+        "./storybook"
+      ],
       "pattern": "**/*.stories.js",
       "outputFile": "./storybook/storyLoader.js"
     }
@@ -35,6 +38,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.5",
+    "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-navigation/bottom-tabs": "^6.0.5",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
@@ -52,7 +56,7 @@
     "react-native-config": "^1.4.4",
     "react-native-gesture-handler": "~1.10.3",
     "react-native-reanimated": "~2.2.0",
-    "react-native-safe-area-context": "3.3.0",
+    "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.6.0",
     "react-native-web": "~0.17.1"
   },

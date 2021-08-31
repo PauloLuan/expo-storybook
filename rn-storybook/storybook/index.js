@@ -8,6 +8,7 @@ import {
 } from '@storybook/react-native'
 import { withKnobs } from '@storybook/addon-knobs'
 import { loadStories } from './storyLoader'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import './rn-addons'
 
@@ -24,7 +25,7 @@ configure(() => {
 const StorybookUIRoot = getStorybookUI({
   host: Platform.OS === 'android' ? '10.0.2.2' : '0.0.0.0',
   // Add the line below
-  asyncStorage: require('@react-native-community/async-storage').default
+  asyncStorage: AsyncStorage
 })
 
 // If you are using React Native vanilla and after installation you don't see your app name here, write it manually.

@@ -9,7 +9,7 @@ import useCachedResources from './hooks/useCachedResources'
 import useColorScheme from './hooks/useColorScheme'
 import Navigation from './navigation'
 
-export default function App() {
+function App() {
   const isLoadingComplete = useCachedResources()
   const colorScheme = useColorScheme()
 
@@ -25,4 +25,4 @@ export default function App() {
   }
 }
 
-export default Config.LOAD_STORYBOOK === 'true' ? StorybookUI : App
+export default __DEV__ ? StorybookUI : App
