@@ -1,3 +1,6 @@
+import StorybookUI from './storybook'
+import Config from 'react-native-config'
+
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
@@ -21,3 +24,5 @@ export default function App() {
     )
   }
 }
+
+export default Config.LOAD_STORYBOOK === 'true' ? StorybookUI : App
