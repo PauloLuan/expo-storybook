@@ -1,0 +1,16 @@
+import React from 'react'
+import {Button, Text, TextInput, View} from 'react-native'
+import {render, waitFor} from '@testing-library/react-native'
+
+import { {{pascalCase name}} } from '.'
+// import theme from '../../styles/Theme'
+
+describe('<{{pascalCase name}} />', () => {
+  const testId = 'component-{{kebabCase name}}-id'
+
+  it('should render the {{pascalCase name}} component', () => {
+    const {getByTestId, queryByTestId, toJSON} = render(<{{pascalCase name}} testId={testId} />)
+    await waitFor(() => expect(queryByTestId(testId)).toBeTruthy())
+    expect(toJSON()).toMatchSnapshot()
+  })
+})

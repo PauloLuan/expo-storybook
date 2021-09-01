@@ -14,11 +14,12 @@
     "test:ci": "jest --runInBand",
     "format": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
     "dedup": "yarn-deduplicate --strategy highest yarn.lock",
-    "bump": "yarn npm-check-updates --reject 'bootstrap react-bootstrap' -u",
+    "bump": "yarn npm-check-updates -u",
     "deps:upgrade": "yarn sort-package-json && yarn bump && yarn dedup && yarn",
     "prestorybook": "rnstl",
     "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "generate": "yarn plop --plopfile generators/plopfile.js"
   },
   "config": {
     "react-native-storybook-loader": {
@@ -32,16 +33,16 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
-    ],
     "setupFilesAfterEnv": [
       "<rootDir>/__mocks__/globalMock.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
     ]
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.5",
-    "@react-native-async-storage/async-storage": "~1.15.0",
+    "@react-native-async-storage/async-storage": "~1.15.7",
     "@react-navigation/bottom-tabs": "^6.0.5",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
@@ -51,7 +52,7 @@
     "expo-constants": "~11.0.1",
     "expo-font": "~9.2.1",
     "expo-linking": "~2.3.1",
-    "expo-splash-screen": "~0.11.2",
+    "expo-splash-screen": "~0.11.4",
     "expo-status-bar": "~1.0.4",
     "expo-web-browser": "~9.2.0",
     "react": "17.0.2",
@@ -60,16 +61,17 @@
     "react-native-config": "^1.4.4",
     "react-native-gesture-handler": "~1.10.3",
     "react-native-reanimated": "~2.2.0",
-    "react-native-safe-area-context": "3.2.0",
+    "react-native-safe-area-context": "3.3.1",
     "react-native-screens": "~3.6.0",
-    "react-native-web": "~0.17.1"
+    "react-native-web": "~0.17.1",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@react-native-community/async-storage": "^1.12.1",
-    "@storybook/addon-actions": "^5.3",
-    "@storybook/addon-knobs": "^5.3",
-    "@storybook/addon-links": "^5.3",
+    "@storybook/addon-actions": "^6.3",
+    "@storybook/addon-knobs": "^6.3",
+    "@storybook/addon-links": "^6.3",
     "@storybook/addon-ondevice-actions": "^5.3.23",
     "@storybook/addon-ondevice-knobs": "^5.3.25",
     "@storybook/react-native": "^5.3.25",
@@ -90,6 +92,7 @@
     "jest-expo": "~42.1.0",
     "lint-staged": "^11.1.2",
     "npm-check-updates": "^11.8.3",
+    "plop": "^2.7.4",
     "prettier": "2.3.2",
     "react-native-storybook-loader": "^2.0.4",
     "sort-package-json": "^1.50.0",

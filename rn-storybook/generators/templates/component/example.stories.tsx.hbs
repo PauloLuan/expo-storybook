@@ -1,0 +1,15 @@
+import React from 'react'
+import { action } from '@storybook/addon-actions'
+{{!-- import { text } from '@storybook/addon-knobs' --}}
+import { storiesOf } from '@storybook/react-native'
+import { {{pascalCase name}}, {{pascalCase name}}Props } from '.'
+
+
+storiesOf('Components/{{pascalCase name}}', module)
+  //.addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
+  .add('default: ', () => (
+    <{{pascalCase name}} {...args} />
+  ))
+  .add('with some modification: ', () => (
+    <{{pascalCase name}} {...args} />
+  ))
