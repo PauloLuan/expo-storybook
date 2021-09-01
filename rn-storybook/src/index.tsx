@@ -3,7 +3,7 @@ import React from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import useCachedResources from './hooks/useCachedResources'
 import useColorScheme from './hooks/useColorScheme'
-import Screen from './screens'
+// import Screen from './screens'
 
 function App() {
   const isLoadingComplete = useCachedResources()
@@ -14,7 +14,7 @@ function App() {
   } else {
     return (
       <SafeAreaProvider>
-        <Screen colorScheme={colorScheme} />
+        {/* <Screen colorScheme={colorScheme} /> */}
         <StatusBar />
       </SafeAreaProvider>
     )

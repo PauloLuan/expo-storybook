@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/native'
 
-// import { {{pascalCase name}}Props } from '.'
+// import { TesteProps } from '.'
 
 export const Wrapper = styled.View`
   ${() => css`
